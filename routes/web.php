@@ -33,15 +33,24 @@ Route::get('/pricing', [MainController::class, 'pricing'])->name('pricing');
 Route::get('/about', [MainController::class, 'about'])->name('about');
 Route::get('/blog', [MainController::class, 'blog'])->name('blog');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/events', [MainController::class, 'events'])->name('events');
 Route::get('/retreats/himalayan-bliss-odyssey', [MainController::class, 'himalayan'])->name('himalayan');
 Route::get('/retreats/know-yourself-retreat-belgian-ardennes', [MainController::class, 'belgian'])->name('belgian');
 Route::get('/blog/{slug}', [MainController::class, 'viewBlog'])->name('view.blog');
+Route::get('/event/{date}/{slug}', [MainController::class, 'viewEvent'])->name('view.event');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/index', [HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/blogs', [HomeController::class, 'blogIndex'])->name('blog.index');
+    Route::get('/events', [HomeController::class, 'eventIndex'])->name('event.index');
     Route::get('/blog/add', [HomeController::class, 'addBlog'])->name('add.blog');
+    Route::get('/event/add', [HomeController::class, 'addEvent'])->name('add.event');
     Route::post('/blog/store', [HomeController::class, 'storeBlog'])->name('store.blog');
+    Route::post('/event/store', [HomeController::class, 'storeEvent'])->name('store.event');
     Route::get('/blog/edit/{id}', [HomeController::class, 'editBlog'])->name('edit.blog');
+    Route::get('/event/edit/{id}', [HomeController::class, 'editEvent'])->name('edit.event');
     Route::post('/blog/update/{id}',[HomeController::class, 'updateBlog'])->name('update.blog');
+    Route::post('/event/update/{id}',[HomeController::class, 'updateEvent'])->name('update.event');
     Route::get('/blog/delete/{id}', [HomeController::class, 'deleteBlog'])->name('delete.blog');
+    Route::get('/event/delete/{id}', [HomeController::class, 'deleteEvent'])->name('delete.event');
 });

@@ -160,6 +160,10 @@
     position: relative;
     padding: 30px;
     background: #ffe3d0;
+    height: 250px;
+    @media only screen and (max-width: 600px) {
+        height: auto;
+      }
 }
 
 .team__item__pic {

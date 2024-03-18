@@ -20,7 +20,7 @@
             </li>
             <li><a href="{{ route('services') }}">SERVICES</a></li>
             <li><a href="{{ route('private.sessions') }}">PRIVATE SESSIONS</a></li>
-            <li><a href="">EVENTS</a></li>
+            <li><a href="{{ route('events') }}">EVENTS</a></li>
             <li><a href="{{ route('retreats') }}">RETREATS</a></li>
             <li><a href="{{ route('host.retreat') }}">HOST A RETREAT</a></li>
             <li><a href="{{ route('pricing') }}">PRICING</a></li>
@@ -76,7 +76,7 @@
                             </li>
                             <li><a href="{{ route('services') }}">SERVICES</a></li>
                             <li><a href="{{ route('private.sessions') }}">PRIVATE SESSIONS</a></li>
-                            <li><a href="">EVENTS</a></li>
+                            <li><a href="{{ route('events') }}">EVENTS</a></li>
                             <li><a href="{{ route('retreats') }}">RETREATS</a></li>
                             <li><a href="{{ route('host.retreat') }}">HOST A RETREAT</a></li>
                             <li><a href="{{ route('pricing') }}">PRICING</a></li>
