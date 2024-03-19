@@ -31,7 +31,12 @@
         <div class="container">
             <div class="faq">
                 <div class="d-flex justify-content-center my-4">
+                    @auth
                     <a href="{{ route('retreat.signup') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
+                    @endauth
+                    @guest
+                    <a href="{{ route('login') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
+                    @endguest
                 </div>
                 <div class="section-title">
                     <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">

@@ -24,7 +24,7 @@
                         <div class="even-date fw-bold my-2">
                             <i class="fa fa-calendar"></i>
                             <time>
-                                <span>{{ \Carbon\Carbon::parse($event->date)->format('l d M Y'); }}</span>
+                                <span>{{ \Carbon\Carbon::parse($event->date)->format('l d M Y') }}</span>
                             </time>
                             <i class="fa fa-clock-o ms-2"></i>
                             <time>
@@ -37,12 +37,18 @@
                         <div class="blog__details__text">
                             {!! $event->body !!}
                             <div class="py-3 d-flex justify-content-center">
-                                <a href="#" class="primary-btn">Sign up for Event</a>
+                                @auth
+                                    <a href="javascript:void(0);" data-toggle="modal" data-target="#eventModal"
+                                        class="primary-btn">Sign up for Event</a>
+                                @endauth
+                                @guest
+                                    <a href="{{ route('login') }}" class="primary-btn">Login to register</a>
+                                @endguest
                             </div>
                         </div>
-                        <div class="row text-dark">
+                        <div class="row text-dark footer__widget">
                             <div class="col-md-4">
-                                <h5 class="fw-bold text-uppercase">Details</h5>
+                                <h5>Details</h5>
                                 <div class="my-3">
                                     <p class="fw-bold m-0">Date:</p>
                                     <p>{{ $event->date }}</p>
@@ -53,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <h5 class="fw-bold text-uppercase">ORGANIZERS</h5>
+                                <h5>ORGANIZERS</h5>
                                 <div class="my-3">
                                     <p>{{ $event->org_name }}</p>
                                     <p>{{ $event->org_email }}</p>
@@ -61,7 +67,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <h5 class="fw-bold text-uppercase">Venue</h5>
+                                <h5>Venue</h5>
                                 <div class="my-3">
                                     <p>{{ $event->location }}</p>
                                     <div class="w-100">
@@ -75,6 +81,7 @@
             </div>
         </div>
     </section>
+    @include('includes.event')
     @include('includes.blog')
     @include('includes.appointment')
 @endsection

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Event;
+use App\Models\Retreat;
+use App\Models\Eventbooking;
+use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller
 {
@@ -64,7 +67,103 @@ class MainController extends Controller
 
     public function viewEvent($date, $slug) {
         $event = Event::where('slug', $slug)->first();
+        $allevents = Event::orderBy('id', 'desc')->get();
 
-        return view('pages.events.view', compact('event'));
+        return view('pages.events.view', compact('event','allevents'));
+    }
+
+    public function eventBooking(Request $request) {
+
+        $eventbooking = new Eventbooking;
+        if(Auth::check() == true) {
+            $eventbooking->user_id = auth()->user()->id;
+        } else {
+            $eventbooking->user_id = 0;
+        }
+        $eventbooking->event_name = $request->event_name;
+        $eventbooking->name = $request->name;
+        $eventbooking->email = $request->email;
+        $eventbooking->phone = $request->phone;
+        $eventbooking->nos = $request->nos;
+        $eventbooking->message = $request->message;
+        $eventbooking->save();
+
+        toastr()->success('Booking Successfull', 'Success!');
+        return redirect()->back();
+    }
+
+    public function updateEventbooking(Request $request, $id){
+        $eventbooking = Eventbooking::find($id);
+        if(Auth::check() == true) {
+            $eventbooking->user_id = auth()->user()->id;
+        } else {
+            $eventbooking->user_id = 0;
+        }
+        $eventbooking->event_name = $request->event_name;
+        $eventbooking->name = $request->name;
+        $eventbooking->email = $request->email;
+        $eventbooking->phone = $request->phone;
+        $eventbooking->nos = $request->nos;
+        $eventbooking->message = $request->message;
+        $eventbooking->save();
+
+        toastr()->success('Event Booking updated successfully', 'Success!');
+        return redirect()->route('home');
+    }
+
+    public function storeRetreat(Request $request) {
+        $retreat = new Retreat;
+        $retreat->nop = $request->nop;
+        if(Auth::check() == true) {
+            $retreat->user_id = auth()->user()->id;
+        } else {
+            $retreat->user_id = 0;
+        }
+        $retreat->retreat_name = $request->retreat_name;
+        $retreat->full_name = $request->full_name;
+        $retreat->gender = $request->gender;
+        $retreat->nationality = $request->nationality;
+        $retreat->dob = $request->dob;
+        $retreat->email = $request->email;
+        $retreat->contact = $request->contact;
+        $retreat->message = $request->message;
+        $retreat->medical = $request->medical;
+        $retreat->dietary = $request->dietary;
+        $retreat->room = $request->room;
+        $retreat->about_us = $request->about_us;
+        $retreat->emer_name = $request->emer_name;
+        $retreat->emer_email = $request->emer_email;
+        $retreat->emer_number = $request->emer_number;
+        $retreat->save();
+        toastr()->success('Retreat Booking Successfull', 'Success!');
+        return redirect()->back();
+    }
+
+    public function updateRetreat(Request $request, $id){
+        $retreat = Retreat::find($id);
+        $retreat->nop = $request->nop;
+        if(Auth::check() == true) {
+            $retreat->user_id = auth()->user()->id;
+        } else {
+            $retreat->user_id = 0;
+        }
+        $retreat->retreat_name = $request->retreat_name;
+        $retreat->full_name = $request->full_name;
+        $retreat->gender = $request->gender;
+        $retreat->nationality = $request->nationality;
+        $retreat->dob = $request->dob;
+        $retreat->email = $request->email;
+        $retreat->contact = $request->contact;
+        $retreat->message = $request->message;
+        $retreat->medical = $request->medical;
+        $retreat->dietary = $request->dietary;
+        $retreat->room = $request->room;
+        $retreat->about_us = $request->about_us;
+        $retreat->emer_name = $request->emer_name;
+        $retreat->emer_email = $request->emer_email;
+        $retreat->emer_number = $request->emer_number;
+        $retreat->save();
+        toastr()->success('Retreat Booking Successfull', 'Success!');
+        return redirect()->back();
     }
 }

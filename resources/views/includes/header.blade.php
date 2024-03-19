@@ -34,6 +34,26 @@
         <a href="https://www.instagram.com/houseforpositivechange/" target="_blank"><i
                 class="fa fa-instagram fa-lg"></i></a>
         <a href="mailto:info@houseforpositivechange.com"><i class="fa fa-envelope fa-lg"></i></a>
+        @guest
+            <a href="{{ route('login') }}"><i class="fa fa-user fa-lg"></i></a>
+        @endguest
+        <nav class="header__menu">
+            <ul>
+                @auth
+                    <li><a href="#" title="{{ Auth::user()->name }}"><i class="fa fa-user fa-lg"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">Logout</a>
+                            </li>
+                            <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </ul>
+                    </li>
+                @endauth
+            </ul>
+        </nav>
     </div>
 </div>
 
@@ -92,6 +112,28 @@
                         <a href="https://www.instagram.com/houseforpositivechange/" target="_blank"><i
                                 class="fa fa-instagram fa-lg"></i></a>
                         <a href="mailto:info@houseforpositivechange.com"><i class="fa fa-envelope fa-lg"></i></a>
+                        @guest
+                            <a href="{{ route('login') }}"><i class="fa fa-user fa-lg"></i></a>
+                        @endguest
+                        <nav class="header__menu">
+                            <ul>
+                                @auth
+                                    <li><a href="#" title="{{ Auth::user()->name }}"><i
+                                                class="fa fa-user fa-lg"></i></a>
+                                        <ul class="dropdown">
+                                            <li><a href="/home">Home</a></li>
+                                            <li><a href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">Logout</a>
+                                            </li>
+                                            <form id="frm-logout" action="{{ route('logout') }}" method="POST"
+                                                style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
+                                        </ul>
+                                    </li>
+                                @endauth
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Event;
+use App\Models\Retreat;
+use App\Models\Eventbooking;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -27,7 +29,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $allevents = Event::orderBy('id', 'desc')->get();
+        $myevents = Eventbooking::where('user_id', auth()->user()->id)->get();
+        $myretreats = Retreat::where('user_id', auth()->user()->id)->get();
+        return view('home',compact('myevents','allevents','myretreats'));
     }
 
     public function dashboard()
@@ -169,5 +174,30 @@ class HomeController extends Controller
         toastr()->error('Event Deleted Successfully', 'Deleted!');
         return back();
     }
+
+    public function deleteEventbooking($id){
+        $eventbooking = Eventbooking::find($id);
+        $eventbooking->delete();
+        toastr()->error('Deleted Successfully', 'Deleted!');
+        return back();
+    }
+
+    public function deleteRetreatbooking($id){
+        $retreatbooking = Retreat::find($id);
+        $retreatbooking->delete();
+        toastr()->error('Deleted Successfully', 'Deleted!');
+        return back();
+    }
+
+    public function eventBookings(){
+        $events = Eventbooking::orderBy('id', 'desc')->get();
+        return view('dashboard.eventBookings', compact('events'));
+    }
+
+    public function retreatBookings(){
+        $myretreats = Retreat::orderBy('id', 'desc')->get();
+        return view('dashboard.retreatBookings', compact('myretreats'));
+    }
+
     
 }

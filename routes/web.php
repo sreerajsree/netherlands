@@ -34,6 +34,9 @@ Route::get('/about', [MainController::class, 'about'])->name('about');
 Route::get('/blog', [MainController::class, 'blog'])->name('blog');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/events', [MainController::class, 'events'])->name('events');
+Route::post('event-booking', [MainController::class, 'eventBooking'])->name('event.booking');
+Route::post('store-retreat', [MainController::class, 'storeRetreat'])->name('store.retreat');
+Route::post('sign-up-for-the-retreat/{id}', [MainController::class, 'updateRetreat'])->name('retreat.update');
 Route::get('/retreats/himalayan-bliss-odyssey', [MainController::class, 'himalayan'])->name('himalayan');
 Route::get('/retreats/know-yourself-retreat-belgian-ardennes', [MainController::class, 'belgian'])->name('belgian');
 Route::get('/blog/{slug}', [MainController::class, 'viewBlog'])->name('view.blog');
@@ -43,6 +46,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/index', [HomeController::class, 'dashboard'])->name('dashboard');
     Route::get('/blogs', [HomeController::class, 'blogIndex'])->name('blog.index');
     Route::get('/events', [HomeController::class, 'eventIndex'])->name('event.index');
+    Route::get('/event-bookings', [HomeController::class, 'eventBookings'])->name('event.bookings');
+    Route::get('/retreat-bookings', [HomeController::class, 'retreatBookings'])->name('retreat.bookings');
     Route::get('/blog/add', [HomeController::class, 'addBlog'])->name('add.blog');
     Route::get('/event/add', [HomeController::class, 'addEvent'])->name('add.event');
     Route::post('/blog/store', [HomeController::class, 'storeBlog'])->name('store.blog');
@@ -51,6 +56,9 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/event/edit/{id}', [HomeController::class, 'editEvent'])->name('edit.event');
     Route::post('/blog/update/{id}',[HomeController::class, 'updateBlog'])->name('update.blog');
     Route::post('/event/update/{id}',[HomeController::class, 'updateEvent'])->name('update.event');
+    Route::post('/event-booking/update/{id}',[MainController::class, 'updateEventbooking'])->name('update.eventbooking');
     Route::get('/blog/delete/{id}', [HomeController::class, 'deleteBlog'])->name('delete.blog');
     Route::get('/event/delete/{id}', [HomeController::class, 'deleteEvent'])->name('delete.event');
+    Route::get('/event-bookings/delete/{id}', [HomeController::class, 'deleteEventbooking'])->name('delete.eventbooking');
+    Route::get('/retreat-bookings/delete/{id}', [HomeController::class, 'deleteRetreatbooking'])->name('delete.retreatbooking');
 });

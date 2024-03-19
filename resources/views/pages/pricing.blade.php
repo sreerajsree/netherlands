@@ -26,8 +26,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 p-0 col-md-6">
-                    <div class="pricing__item set-bg" data-setbg="{{ asset('assets/img/pricing/price-bg-1.png') }}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing__item set-bg shadow-lg" data-setbg="{{ asset('assets/img/pricing/price-bg-1.png') }}">
                         <h4>YoPi Training</h4>
                         <div class="pricing__item__price">
                             <h2>€8,50</h2>
@@ -42,8 +42,8 @@
                         <a href="https://widget.onlineafspraken.nl/consumer/booking/book/grid/1?key=bggh11mblr32-zbdz10&storage=clear#" target="_blank" class="primary-btn">BOOK NOW</a>
                     </div>
                 </div>
-                <div class="col-lg-4 p-0 col-md-6">
-                    <div class="pricing__item set-bg" data-setbg="{{ asset('assets/img/pricing/price-bg-2.png') }}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing__item set-bg shadow-lg" data-setbg="{{ asset('assets/img/pricing/price-bg-2.png') }}">
                         <h4>Train your Breath</h4>
                         <div class="pricing__item__price">
                             <h2>€8,50</h2>
@@ -58,8 +58,8 @@
                         <a href="https://widget.onlineafspraken.nl/consumer/booking/book/grid/1?key=bggh11mblr32-zbdz10&storage=clear#" target="_blank" class="primary-btn">BOOK NOW</a>
                     </div>
                 </div>
-                <div class="col-lg-4 p-0 col-md-6">
-                    <div class="pricing__item set-bg" data-setbg="{{ asset('assets/img/pricing/price-bg-3.png') }}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing__item set-bg shadow-lg" data-setbg="{{ asset('assets/img/pricing/price-bg-3.png') }}">
                         <h4>Train your Breath - 65+</h4>
                         <div class="pricing__item__price">
                             <h2>€8,50</h2>
@@ -74,8 +74,8 @@
                         <a href="https://widget.onlineafspraken.nl/consumer/booking/book/grid/1?key=bggh11mblr32-zbdz10&storage=clear#" target="_blank" class="primary-btn">BOOK NOW</a>
                     </div>
                 </div>
-                <div class="col-lg-4 p-0 col-md-6">
-                    <div class="pricing__item set-bg" data-setbg="{{ asset('assets/img/pricing/price-bg-1.png') }}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing__item set-bg shadow-lg" data-setbg="{{ asset('assets/img/pricing/price-bg-1.png') }}">
                         <h4>DeepRest (Chair) Yoga</h4>
                         <div class="pricing__item__price">
                             <h2>€8,50</h2>
@@ -90,8 +90,8 @@
                         <a href="https://widget.onlineafspraken.nl/consumer/booking/book/grid/1?key=bggh11mblr32-zbdz10&storage=clear#" target="_blank" class="primary-btn">BOOK NOW</a>
                     </div>
                 </div>
-                <div class="col-lg-4 p-0 col-md-6">
-                    <div class="pricing__item set-bg" data-setbg="{{ asset('assets/img/pricing/price-bg-2.png') }}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing__item set-bg shadow-lg" data-setbg="{{ asset('assets/img/pricing/price-bg-2.png') }}">
                         <h4>DeepRest (Chair) Yoga - 65+</h4>
                         <div class="pricing__item__price">
                             <h2>€8,50</h2>
@@ -106,8 +106,8 @@
                         <a href="https://widget.onlineafspraken.nl/consumer/booking/book/grid/1?key=bggh11mblr32-zbdz10&storage=clear#" target="_blank" class="primary-btn">BOOK NOW</a>
                     </div>
                 </div>
-                <div class="col-lg-4 p-0 col-md-6">
-                    <div class="pricing__item set-bg" data-setbg="{{ asset('assets/img/pricing/price-bg-2.png') }}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing__item set-bg shadow-lg" data-setbg="{{ asset('assets/img/pricing/price-bg-2.png') }}">
                         <h4>DeepRest Yoga</h4>
                         <div class="pricing__item__price">
                             <h2>€9,50</h2>

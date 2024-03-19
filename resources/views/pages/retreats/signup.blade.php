@@ -22,27 +22,28 @@
                 <div class="col-lg-12">
                     <div class="leave__comment__text">
                         <h2>We are excited to see you signing up for our retreat.</h2>
-                        <form class="row g-3" action="#">
+                        <form class="row g-3" action="{{ route('store.retreat') }}" method="POST">
+                            @csrf
                             <div class="col-md-6">
                                 <label for="nop" class="form-label">No. of participants</label>
-                                <input type="number" class="form-control form-control-lg" id="nop" value="1">
+                                <input type="number" class="form-control form-control-lg" id="nop" name="nop" value="1">
                             </div>
                             <div class="col-md-6">
-                                <label for="inputState" class="form-label">Retreat name <span class="text-danger">*</span></label>
-                                <select id="inputState" class="form-select form-select-lg" name="retreat_name" required>
-                                    <option selected>Select Retreat</option>
+                                <label for="retreat_name" class="form-label">Retreat name <span class="text-danger">*</span></label>
+                                <select id="retreat_name" class="form-select form-select-lg" name="retreat_name" required>
+                                    <option selected disabled>Select Retreat</option>
                                     <option value="Himalayan Bliss Odyssey Retreat">Himalayan Bliss Odyssey Retreat</option>
                                     <option value="Know Yourself Retreat - Belgian Ardennes">Know Yourself Retreat - Belgian Ardennes</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
                                 <label for="full_name" class="form-label">Full Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control form-control-lg" id="full_name" placeholder="Eg: John Carter" required>
+                                <input type="text" class="form-control form-control-lg" id="full_name" name="full_name" placeholder="Eg: John Carter" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="nop" class="form-label">Gender <span class="text-danger">*</span></label>
                                 <div class="form-check">
-                                    <input class="form-check-input form-check-input" type="radio" name="gender" id="female" checked
+                                    <input class="form-check-input" type="radio" name="gender" id="female" checked
                                         value="female">
                                     <label class="form-check-label" for="female">
                                         Female
@@ -73,7 +74,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control form-control-lg" id="email" placeholder="Eg: John@doe.com" required>
+                                <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Eg: John@doe.com" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="contact" class="form-label">Contact number <span class="text-danger">*</span></label>

@@ -24,7 +24,7 @@
     <section class="event-cards spad">
         <div class="container">
             <div class="row">
-                @foreach ($events as $item)
+                @forelse ($events as $item)
                     <article class="card fl-left">
                         <section class="date">
                             <time datetime="{{ \Carbon\Carbon::parse($item->date)->format('d-M-Y'); }}">
@@ -50,7 +50,9 @@
                             <a href="{{ route('view.event',[$item->date,$item->slug]) }}">READ MORE</a>
                         </section>
                     </article>
-                @endforeach
+                    @empty
+                    <p>No Events Found</p>
+                @endforelse
             </div>
         </div>
     </section>
