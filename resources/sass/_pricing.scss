@@ -16,7 +16,7 @@
   transform: scale(1);
   @include transition(all, 0.5s);
   z-index: 1;
-  margin-bottom: 40px;
+  margin-bottom: 1.5rem;
   border-radius: 10px;
   overflow: hidden;
 
@@ -68,9 +68,9 @@
   }
 
   h4 {
-    font-size: 25px;
+    font-size: 22px;
     color: #001943;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
 
   .pricing__item__price {

@@ -24,6 +24,8 @@ Route::get('generate', function (){
     \Illuminate\Support\Facades\Artisan::call('storage:link');
     echo 'ok';
 });
+Route::view('terms-conditions', 'pages.terms')->name('terms'); 
+Route::view('privacy-policy', 'pages.privacy')->name('privacy'); 
 Route::get('/services', [MainController::class, 'services'])->name('services');
 Route::get('/private-sessions', [MainController::class, 'privateSessions'])->name('private.sessions');
 Route::get('/retreats', [MainController::class, 'retreats'])->name('retreats');
@@ -39,7 +41,15 @@ Route::post('store-retreat', [MainController::class, 'storeRetreat'])->name('sto
 Route::post('sign-up-for-the-retreat/{id}', [MainController::class, 'updateRetreat'])->name('retreat.update');
 Route::get('/retreats/himalayan-bliss-odyssey', [MainController::class, 'himalayan'])->name('himalayan');
 Route::get('/retreats/know-yourself-retreat-belgian-ardennes', [MainController::class, 'belgian'])->name('belgian');
+//Yoga
+Route::get('/services/yoga-practices', [MainController::class, 'yogaPractices'])->name('yoga.practices');
+//Ayu
+Route::get('/services/ayurvedic-healthcare', [MainController::class, 'ayuHealthcare'])->name('ayu.healthcare');
+//Body
+Route::get('/services/body-fit-practices', [MainController::class, 'bodyFit'])->name('body.fit');
+//Blog
 Route::get('/blog/{slug}', [MainController::class, 'viewBlog'])->name('view.blog');
+//Events
 Route::get('/event/{date}/{slug}', [MainController::class, 'viewEvent'])->name('view.event');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {

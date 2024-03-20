@@ -79,7 +79,7 @@
             </div>
         </div>
     </div>
-    <section class="spad pb-0">
+    <section class="spad pb-0" id="meet_the_team">
         <div class="container">
             <div class="row gy-3 gy-md-4 gy-lg-0">
                 <div class="col-12 col-lg-6">

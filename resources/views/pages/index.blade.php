@@ -44,8 +44,6 @@
                         <div class="home__about__pic__item">
                             <div class="home__about__pic__item__inner set-bg"
                                 data-setbg="{{ asset('assets/img/about/about-2.jpg') }}"></div>
-                            <div class="home__about__pic__item__inner set-bg"
-                                data-setbg="{{ asset('assets/img/about/about-3.jpg') }}"></div>
                         </div>
                     </div>
                 </div>

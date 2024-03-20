@@ -30,7 +30,7 @@
                             <span>Trending</span>
                         </div>
                         <div class="classes__item__text">
-                            <h4><a href="#">Yoga</a></h4>
+                            <h4><a href="{{ route('yoga.practices') }}">Yoga</a></h4>
                             <hr>
                             <div class="content">
                                 <p>Experience the transformative power of Yoga at House for Positive Change. Our program is
@@ -49,7 +49,7 @@
                                     help you reduce anxiety, improve sleep, and enhance overall mental wellness.
                                 </p>
                             </div>
-                            <a href="#" class="class-btn">EXPLORE OUR YOGA PRACTICES</a>
+                            <a href="{{ route('yoga.practices') }}" class="class-btn">EXPLORE OUR YOGA PRACTICES</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                             <span>Trending</span>
                         </div>
                         <div class="classes__item__text">
-                            <h4><a href="#">Ayurvedic Healthcare</a></h4>
+                            <h4><a href="{{ route('ayu.healthcare') }}">Ayurvedic Healthcare</a></h4>
                             <hr>
                             <div class="content">
                                 <p>Dive into the ultimate in holistic care of Ayurvedic massages and Ayurveda Lifestyle and
@@ -78,7 +78,7 @@
                                     restored balance and enhanced well-being.
                                 </p>
                             </div>
-                            <a href="#" class="class-btn">EXPLORE OUR AYURVEDIC HEALTHCARE</a>
+                            <a href="{{ route('ayu.healthcare') }}" class="class-btn">EXPLORE OUR AYURVEDIC HEALTHCARE</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                             <span>Trending</span>
                         </div>
                         <div class="classes__item__text">
-                            <h4><a href="#">Body Fit Practices</a></h4>
+                            <h4><a href="{{ route('body.fit') }}">Body Fit Practices</a></h4>
                             <hr>
                             <div class="content">
                                 <p>At House for Positive Change, we offer a diverse range of body fit practices designed to
@@ -110,7 +110,7 @@
     
                                 </p>
                             </div>
-                            <a href="#" class="class-btn">EXPLORE OUR BODY PRACTICES</a>
+                            <a href="{{ route('body.fit') }}" class="class-btn">EXPLORE OUR BODY PRACTICES</a>
                         </div>
                     </div>
                 </div>

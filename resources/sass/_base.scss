@@ -248,6 +248,38 @@ label {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
+.border-services {
+  border: 1px solid #e18e23 !important;
+}
+
+.border-services-main {
+  border: 2px solid #e18e23 !important;
+}
+
+.terms {
+  p {
+    a {
+      color: #586e5c;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.fs-26 {
+  font-size: 26px !important;
+  @media only screen and (max-width: 600px) {
+    font-size: 20px !important;
+  }
+}
+
+.service-ch {
+  min-height: 100px;
+}
+
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #e18e23;

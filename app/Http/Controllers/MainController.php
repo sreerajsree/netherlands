@@ -47,6 +47,18 @@ class MainController extends Controller
         return view('pages.about');
     }
 
+    public function yogaPractices() {
+        return view('pages.yoga.index');
+    }
+
+    public function ayuHealthcare() {
+        return view('pages.ayu.index');
+    }
+
+    public function bodyFit() {
+        return view('pages.body.index');
+    }
+
     public function blog() {
         $blogs = Blog::orderBy('id','desc')->paginate(12);
         return view('pages.blog.index', compact('blogs'));
