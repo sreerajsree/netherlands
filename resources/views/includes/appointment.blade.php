@@ -1,5 +1,4 @@
-<!-- Appoinment Section Begin -->
-<section class="appointment">
+{{-- <section class="appointment">
     <div class="container">
         <div class="appointment__text">
             <div class="row">
@@ -21,11 +20,6 @@
                     <div class="col-lg-12">
                         <input type="text" placeholder="Phone">
                     </div>
-                    {{-- <div class="col-lg-6">
-                        <select class="class-select">
-                            <option value="">Choose Your Class</option>
-                        </select>
-                    </div> --}}
                     <div class="col-lg-12 text-center">
                         <textarea placeholder="Message"></textarea>
                         <button type="submit">Submit</button>
@@ -34,5 +28,4 @@
             </form>
         </div>
     </div>
-</section>
-<!-- Appoinment Section End -->
+</section> --}}

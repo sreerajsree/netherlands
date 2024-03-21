@@ -52,7 +52,7 @@
                                 rows="5">{{ $item->message }}</textarea>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="site-btn mt-5">Submit</button>
+                            <button type="submit" class="site-btn mt-3">Submit</button>
                         </div>
                     </form>
                 </div>

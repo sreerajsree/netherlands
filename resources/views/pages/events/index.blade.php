@@ -9,12 +9,6 @@
                     <div class="breadcrumb__text">
                         <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
                         <h2>Events</h2>
-                        <div class="breadcrumb__widget">
-                            <span>Here at House for Positive Change, we offer several workshops and organise events to allow
-                                our community to connect, learn and thrive together. Join us during one of our many events,
-                                such as our Men's Circle and Satsanga Evenings, or follow a workshop offered by our
-                                experienced teachers, or through House for Positive Change.</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -23,6 +17,14 @@
 
     <section class="event-cards spad">
         <div class="container">
+            <div class="p-3 text-center">
+                <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
+                <p class="mt-3">Here at House for Positive Change, we offer several workshops and organise events to allow
+                    our community to connect, learn and thrive together. Join us during one of our many events,
+                    such as our Men's Circle and Satsanga Evenings, or follow a workshop offered by our
+                    experienced teachers, or through House for Positive Change.
+                </p>
+            </div>
             <div class="row">
                 @forelse ($events as $item)
                     <article class="card fl-left">

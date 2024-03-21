@@ -9,14 +9,6 @@
                     <div class="breadcrumb__text">
                         <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
                         <h2>About us</h2>
-                        <div class="breadcrumb__widget">
-                            <span>House for Positive Change began as a dream: to provide a transformative community and
-                                space where individuals could embark on their journey of personal growth and well-being.
-                                Inspired by the desire to create our own positive impact on the world, we, Elianne van
-                                Waalwijk van Doorn and Mukesh Joshi, pushed through and pursued this vision. Despite the
-                                challenges of quarantaine, we founded House for Positive Change early 2020 and opened a new
-                                home base in Voorschoten two years later.</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -28,6 +20,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="about-content">
+                        <p>
+                            House for Positive Change began as a dream: to provide a transformative community and
+                            space where individuals could embark on their journey of personal growth and well-being.
+                            Inspired by the desire to create our own positive impact on the world, we, Elianne van
+                            Waalwijk van Doorn and Mukesh Joshi, pushed through and pursued this vision. Despite the
+                            challenges of quarantaine, we founded House for Positive Change early 2020 and opened a new
+                            home base in Voorschoten two years later.
+                        </p>
                         <p>
                             Our company aims to offer a sanctuary for anyone seeking inner balance, prosperity and
                             happiness. We offer a diverse range of holistic services, including yoga, meditation, therapies,
@@ -231,9 +231,9 @@
                                         them up where they are. “No need to fit into any form or image. We’re all spirits
                                         with our own human experiences.”
                                     </p>
-                                    <a href="https://www.linkedin.com/in/mukesh-joshi-28b507281/"
-                                        target="_blank" class="primary-btn mt-4">FIND MUKESH ON <i
-                                            class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i> LINKEDIN</a>
+                                    <a href="https://www.linkedin.com/in/mukesh-joshi-28b507281/" target="_blank"
+                                        class="primary-btn mt-4">FIND MUKESH ON <i class="fa fa-linkedin-square fa-lg"
+                                            aria-hidden="true"></i> LINKEDIN</a>
                                 </div>
                             </div>
                         </div>

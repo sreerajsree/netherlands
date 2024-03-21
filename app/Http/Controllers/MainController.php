@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Event;
+use App\Models\Service;
 use App\Models\Retreat;
 use App\Models\Eventbooking;
 use Illuminate\Support\Facades\Auth;
@@ -57,6 +58,30 @@ class MainController extends Controller
 
     public function bodyFit() {
         return view('pages.body.index');
+    }
+
+    public function deepestchairYoga() {
+        return view('pages.yoga.deeprest-chair-yoga');
+    }
+
+    public function trainyoutbreathYoga() {
+        return view('pages.yoga.train-your-breath');
+    }
+
+    public function foundationalYoga() {
+        return view('pages.yoga.foundational-yoga');
+    }
+
+    public function yopitrainingYoga() {
+        return view('pages.yoga.yopi-training');
+    }
+
+    public function yogaTherapy() {
+        return view('pages.yoga.yoga-therapy');
+    }
+
+    public function traumaYoga() {
+        return view('pages.yoga.trauma-sensitive-yoga');
     }
 
     public function blog() {
@@ -176,6 +201,29 @@ class MainController extends Controller
         $retreat->emer_number = $request->emer_number;
         $retreat->save();
         toastr()->success('Retreat Booking Successfull', 'Success!');
+        return redirect()->back();
+    }
+
+    public function storeService(Request $request) {
+        $service = new Service;
+        if(Auth::check() == true) {
+            $service->user_id = Auth::user()->id;
+        } else {
+            $service->user_id = 0;
+        }
+        $service->trainer = $request->trainer;
+        $service->first_name = $request->first_name;
+        $service->last_name = $request->last_name;
+        $service->email = $request->email;
+        $service->phone = $request->phone;
+        $service->interest = implode(',', (array) $request['interest']);
+        $service->message = $request->message;
+        $service->day =implode(',', (array) $request['day']);
+        $service->time = implode(',', (array) $request['time']);
+        $service->place = implode(',', (array) $request['place']);
+        $service->notes = $request->notes;
+        $service->save();
+        toastr()->success('Booking Successfull', 'Success!');
         return redirect()->back();
     }
 }

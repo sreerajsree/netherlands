@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Event;
 use App\Models\Retreat;
+use App\Models\Service;
 use App\Models\Eventbooking;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -32,12 +34,17 @@ class HomeController extends Controller
         $allevents = Event::orderBy('id', 'desc')->get();
         $myevents = Eventbooking::where('user_id', auth()->user()->id)->get();
         $myretreats = Retreat::where('user_id', auth()->user()->id)->get();
-        return view('home',compact('myevents','allevents','myretreats'));
+        $myservices = Service::where('user_id', auth()->user()->id)->get();
+        return view('home',compact('myevents','allevents','myretreats','myservices'));
     }
 
     public function dashboard()
     {
-        return view('dashboard.dashboard');
+        if(Auth::user()->role == 'admin') {
+            return view('dashboard.dashboard');
+        } else {
+            return redirect()->route('home');
+        }
     }
 
     public function blogIndex() {
@@ -189,6 +196,14 @@ class HomeController extends Controller
         return back();
     }
 
+    public function cancelService($id){
+        $service = Service::find($id);
+        $service->status = 1;
+        $service->save();
+        toastr()->error('Booking Cancelled', 'Cancelled!');
+        return back();
+    }
+
     public function eventBookings(){
         $events = Eventbooking::orderBy('id', 'desc')->get();
         return view('dashboard.eventBookings', compact('events'));
@@ -197,6 +212,11 @@ class HomeController extends Controller
     public function retreatBookings(){
         $myretreats = Retreat::orderBy('id', 'desc')->get();
         return view('dashboard.retreatBookings', compact('myretreats'));
+    }
+
+    public function serviceBookings(){
+        $myservices = Service::orderBy('id', 'desc')->get();
+        return view('dashboard.serviceBookings', compact('myservices'));
     }
 
     

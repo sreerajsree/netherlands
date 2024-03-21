@@ -9,17 +9,6 @@
                     <div class="breadcrumb__text">
                         <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
                         <h2>Retreats</h2>
-                        <div class="breadcrumb__widget">
-                            <span>House for Positive Change offers transformative journeys to self-discovery and conscious
-                                living. Amid the chaos of modern life, we believe in embracing life's essence by delving
-                                into consciousness. Our unique programs combine indulgence and transformative challenges,
-                                using practices like yoga, meditation, and silent hikes to restore physical and mental
-                                balance. We aim to awaken inner consciousness, guiding participants toward liberated,
-                                fulfilling lives. By harnessing consciousness's power, we invite individuals to live wisely
-                                and beautifully. <br><br>
-                                Join our retreats, embark on the journey to self-discovery, nurture mind and body, and
-                                unwrap life's possibilities. Time flies, and the transformative journey awaits.</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -28,6 +17,21 @@
     <!-- Breadcrumb End -->
     <section class="classes spad retreats">
         <div class="container">
+            <div class="p-3 text-center">
+                <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
+                <p class="mt-3">House for Positive Change offers transformative journeys to self-discovery and conscious
+                    living. Amid the chaos of modern life, we believe in embracing life's essence by delving
+                    into consciousness. Our unique programs combine indulgence and transformative challenges,
+                    using practices like yoga, meditation, and silent hikes to restore physical and mental
+                    balance. We aim to awaken inner consciousness, guiding participants toward liberated,
+                    fulfilling lives. By harnessing consciousness's power, we invite individuals to live wisely
+                    and beautifully.
+                </p>
+                <p>
+                    Join our retreats, embark on the journey to self-discovery, nurture mind and body, and
+                    unwrap life's possibilities. Time flies, and the transformative journey awaits.
+                </p>
+            </div>
             <div class="row align-items-center">
                 <div class="col-md-3">
                     <div class="main-image">

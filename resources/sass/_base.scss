@@ -46,7 +46,7 @@ p {
   font-family: "Poppins", sans-serif;
   color: #6e7580;
   font-weight: 400;
-  line-height: 26px;
+  line-height: normal;
   margin: 0 0 15px 0;
 }
 
@@ -249,11 +249,11 @@ label {
 }
 
 .border-services {
-  border: 1px solid #e18e23 !important;
+  border: 1px solid #af7152 !important;
 }
 
 .border-services-main {
-  border: 2px solid #e18e23 !important;
+  border: 2px solid #af7152 !important;
 }
 
 .terms {
@@ -269,6 +269,7 @@ label {
   }
 }
 
+
 .fs-26 {
   font-size: 26px !important;
   @media only screen and (max-width: 600px) {
@@ -278,6 +279,18 @@ label {
 
 .service-ch {
   min-height: 100px;
+}
+
+.text-brown {
+  color: #af7152 !important;
+  font-size: 16px !important;
+}
+
+.cancellation {
+  background-color: #586e5c;
+  border-top: 2px dotted #e18e23;
+  border-bottom: 2px dotted #e18e23;
+  margin: 20px;
 }
 
 .btn-primary {
@@ -314,13 +327,16 @@ label {
 .primary-btn {
   display: inline-block;
   font-size: 14px;
-  padding: 16px 36px 14px;
+  padding: 15px 30px 15px;
   color: $white-color;
   text-transform: uppercase;
   font-weight: 700;
   background: $primary-color;
   border-radius: 2px;
   letter-spacing: 2px;
+  @media only screen and (max-width: 600px) {
+    padding: 12px 16px 12px;
+  }
 }
 
 .site-btn {

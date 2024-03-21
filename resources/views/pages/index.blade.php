@@ -82,7 +82,7 @@
             <div class="services__list">
                 <div class="row">
                     <div class="col-xl-4 col-md-4 col-sm-6">
-                        <a href="">
+                        <a href="{{ route('foundational.yoga') }}">
                             <div class="services__item">
                                 <img src="{{ asset('assets/img/services/FOUNDATION-YOGA.jpg') }}" alt="">
                                 <h5>FOUNDATION YOGA</h5>
@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-4 col-sm-6">
-                        <a href="">
+                        <a href="{{ route('retreats') }}">
                             <div class="services__item">
                                 <img src="{{ asset('assets/img/services/RETREATS.jpg') }}" alt="">
                                 <h5>RETREATS</h5>
@@ -115,7 +115,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-4 col-sm-6">
-                        <a href="">
+                        <a href="{{ route('yoga.practices') }}">
                             <div class="services__item">
                                 <img src="{{ asset('assets/img/services/YOGA-THERAPY.jpg') }}" alt="">
                                 <h5>YOGA THERAPY</h5>
@@ -123,7 +123,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-4 col-sm-6">
-                        <a href="">
+                        <a href="{{ route('trauma.yoga') }}">
                             <div class="services__item">
                                 <img src="{{ asset('assets/img/services/TRAUMA-SENSITIVE-YOGA.jpg') }}" alt="">
                                 <h5>TRAUMA SENSITIVE YOGA (TCTSY)</h5>
@@ -149,7 +149,7 @@
                                 Positive Change, we give you the opportunity to explore a variety of yoga techniques and
                                 classes, each with its own health benefits.
                             </p>
-                            <a href="#" class="primary-btn text-uppercase">Read More</a>
+                            <a href="{{ route('yoga.practices') }}" class="primary-btn text-uppercase">Read More</a>
                         </div>
                         <div class="mb-5">
                             <h2><img width="30" height="30" src="{{ asset('assets/img/logo-dark.png') }}" alt="Logo"> Ayurvedic healthcare</h2>
@@ -160,7 +160,7 @@
                                 for the body, mind, and spirit, or go even deeper and book an Ayurvedic Lifestyle and
                                 Nutrition Coaching.
                             </p>
-                            <a href="#" class="primary-btn text-uppercase">Read More</a>
+                            <a href="{{ route('ayu.healthcare') }}" class="primary-btn text-uppercase">Read More</a>
                         </div>
                         <div>
                             <h2><img width="30" height="30" src="{{ asset('assets/img/logo-dark.png') }}" alt="Logo"> Body fit practices</h2>
@@ -170,7 +170,7 @@
                                 Training to boost your strength and endurance. The trio of practices aim to nurture physical
                                 fitness, mental well-being, and deep relaxation.
                             </p>
-                            <a href="#" class="primary-btn text-uppercase">Read More</a>
+                            <a href="{{ route('body.fit') }}" class="primary-btn text-uppercase">Read More</a>
                         </div>
                     </div>
                 </div>

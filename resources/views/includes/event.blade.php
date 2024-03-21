@@ -41,7 +41,7 @@
                             <textarea class="form-control form-control-lg" name="message" id="message" name="message" cols="30" rows="5"></textarea>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="site-btn mt-5">Submit</button>
+                            <button type="submit" class="site-btn mt-3">Submit</button>
                         </div>
                     </form>
                 </div>

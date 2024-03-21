@@ -141,7 +141,7 @@
                             <input type="text" class="form-control form-control-lg" id="emer_number"
                                 name="emer_number" value="{{ $item->emer_number }}" required>
                         </div>
-                        <button type="submit" class="site-btn mt-5">Submit</button>
+                        <button type="submit" class="site-btn mt-3">Submit</button>
                     </form>
                 </div>
             </div>

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="footer__about">
-                    <img src="{{ asset('assets/img/logo-footer.png') }}" alt="">
+                    <img src="{{ asset('assets/img/logo-footer.png') }}" alt="Logo">
                 </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6">
