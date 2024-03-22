@@ -1,5 +1,8 @@
 @extends('layouts.app')
-
+@section('seo')
+<title>Privacy policy - House for Positive Change</title>
+<meta name="description" content="House for Positive Change - Live life. Time flies.">
+@endsection
 @section('content')
     <!-- Breadcrumb Begin -->
     <section class="breadcrumb-option set-bg" data-setbg="{{ asset('assets/img/services/host-a-retreat.jpg') }}">

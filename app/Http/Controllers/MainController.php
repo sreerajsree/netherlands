@@ -84,6 +84,46 @@ class MainController extends Controller
         return view('pages.yoga.trauma-sensitive-yoga');
     }
 
+    public function ayuLifestyle() {
+        return view('pages.ayu.ayurveda-lifestyle');
+    }
+
+    public function ayuAbhyangam() {
+        return view('pages.ayu.abhyangam-massage');
+    }
+
+    public function bodyMassage () {
+        return view('pages.ayu.body-massage');
+    }
+
+    public function udvartana () {
+        return view('pages.ayu.udvartana-massage');
+    }
+
+    public function pinda () {
+        return view('pages.ayu.pinda-svedana');
+    }
+
+    public function nasyamnasal () {
+        return view('pages.ayu.nasyam-nasal');
+    }
+
+    public function shirodhara () {
+        return view('pages.ayu.shirodhara');
+    }
+
+    public function yogaMassage () {
+        return view('pages.body.yoga');
+    }
+
+    public function outdoorYoga () {
+        return view('pages.body.outdoor-yoga');
+    }
+
+    public function hbsMassage () {
+        return view('pages.ayu.hbs');
+    }
+
     public function blog() {
         $blogs = Blog::orderBy('id','desc')->paginate(12);
         return view('pages.blog.index', compact('blogs'));

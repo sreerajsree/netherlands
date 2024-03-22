@@ -10,7 +10,7 @@
             <li>CALL US: + 1 800-567-8990</li>
             <li>WRITE US: <a href="mailto:info@houseforpositivechange.com">info@houseforpositivechange.com</a></li>
         </ul>
-        <a href="#" class="primary-btn">Request a Quote</a>
+        <a href="{{ route('host.retreat') }}" class="primary-btn">HOST A RETREAT</a>
     </div>
     <nav class="header__menu">
         <ul class="mobile-menu">
@@ -22,7 +22,6 @@
             <li><a href="{{ route('private.sessions') }}">PRIVATE SESSIONS</a></li>
             <li><a href="{{ route('events') }}">EVENTS</a></li>
             <li><a href="{{ route('retreats') }}">RETREATS</a></li>
-            <li><a href="{{ route('host.retreat') }}">HOST A RETREAT</a></li>
             <li><a href="{{ route('pricing') }}">PRICING</a></li>
             <li><a href="{{ route('about') }}">ABOUT</a></li>
             <li><a href="{{ route('blog') }}">BLOG</a></li>
@@ -75,7 +74,7 @@
                                     href="mailto:info@houseforpositivechange.com">info@houseforpositivechange.com</a>
                             </li>
                         </ul>
-                        <a href="#" class="primary-btn">Request a Quote</a>
+                        <a href="{{ route('host.retreat') }}" class="primary-btn">HOST A RETREAT</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +97,6 @@
                             <li><a href="{{ route('private.sessions') }}">PRIVATE SESSIONS</a></li>
                             <li><a href="{{ route('events') }}">EVENTS</a></li>
                             <li><a href="{{ route('retreats') }}">RETREATS</a></li>
-                            <li><a href="{{ route('host.retreat') }}">HOST A RETREAT</a></li>
                             <li><a href="{{ route('pricing') }}">PRICING</a></li>
                             <li><a href="{{ route('about') }}">ABOUT</a></li>
                             <li><a href="{{ route('blog') }}">BLOG</a></li>

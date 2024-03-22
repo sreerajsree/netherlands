@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="House for Positive Change - Live life. Time flies.">
-    <meta name="keywords" content="House for Positive Change - Live life. Time flies.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>House for Positive Change - Live life. Time flies.</title>
+    @yield('seo')
+    <meta property="og:image" content="{{ asset('assets/img/logo-footer.png') }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home - House for Positive Change">
+    <meta name="twitter:image" content="{{ asset('assets/img/logo-footer.png') }}">
+    <meta property="og:locale" content="en_US">
     <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('assets/img/logo.png') }}">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +18,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
     <!-- Css Styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/css/elegant-icons.css') }}" type="text/css">

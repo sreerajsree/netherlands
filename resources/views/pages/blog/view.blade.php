@@ -1,5 +1,8 @@
 @extends('layouts.app')
-
+@section('seo')
+<title>{{ $blog->title }} - House for Positive Change</title>
+<meta name="description" content="House for Positive Change - Live life. Time flies.">
+@endsection
 @section('content')
     <section class="breadcrumb-option blog-hero set-bg" data-setbg="{{ asset('assets/img/hero/hero.jpg') }}">
         <div class="container">

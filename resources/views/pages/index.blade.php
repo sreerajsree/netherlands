@@ -1,5 +1,8 @@
 @extends('layouts.app')
-
+@section('seo')
+<title>House for Positive Change - Live life. Time flies.</title>
+<meta name="description" content="House for Positive Change - Live life. Time flies.">
+@endsection
 @section('content')
     <!-- Hero Section Begin -->
     <section class="hero">
@@ -98,7 +101,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-4 col-sm-6">
-                        <a href="">
+                        <a href="{{ route('ayu.healthcare') }}">
                             <div class="services__item">
                                 <img src="{{ asset('assets/img/services/MASSAGES.jpg') }}" alt="">
                                 <h5>MASSAGES</h5>
@@ -106,7 +109,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-4 col-sm-6">
-                        <a href="">
+                        <a href="{{ route('ayu.lifestyle') }}">
                             <div class="services__item">
                                 <img src="{{ asset('assets/img/services/AYURVEDIC-LIFESTYLE-NUTRITION.jpg') }}"
                                     alt="">

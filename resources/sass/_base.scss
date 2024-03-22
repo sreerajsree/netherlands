@@ -339,13 +339,24 @@ label {
   }
 }
 
+ul {
+  li {
+    font-size: 14px;
+  }
+}
+
+.form-check-input:checked {
+  background-color: #e18e23 !important;
+  border-color: #e18e23 !important;
+}
+
 .site-btn {
   font-size: 14px;
   color: $white-color;
   font-weight: 700;
   text-transform: uppercase;
   display: inline-block;
-  padding: 14px 50px;
+  padding: 12px 42px;
   background: $primary-color;
   border: none;
   letter-spacing: 2px;

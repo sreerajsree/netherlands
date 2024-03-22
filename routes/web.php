@@ -52,8 +52,18 @@ Route::get('/services/yoga-therapy', [MainController::class, 'yogaTherapy'])->na
 Route::get('/services/trauma-sensitive-yoga', [MainController::class, 'traumaYoga'])->name('trauma.yoga');
 //Ayu
 Route::get('/services/ayurvedic-healthcare', [MainController::class, 'ayuHealthcare'])->name('ayu.healthcare');
+Route::get('/services/ayurveda-lifestyle-and-nutrition-coaching', [MainController::class, 'ayuLifestyle'])->name('ayu.lifestyle');
+Route::get('/services/abhyangam-massage', [MainController::class, 'ayuAbhyangam'])->name('ayu.abhyangam');
+Route::get('/services/4-hands-full-body-massage', [MainController::class, 'bodyMassage'])->name('ayu.body');
+Route::get('/services/udvartana-massage', [MainController::class, 'udvartana'])->name('ayu.udvartana');
+Route::get('/services/pinda-svedana', [MainController::class, 'pinda'])->name('ayu.pinda');
+Route::get('/services/nasyam-nasal-treatment', [MainController::class, 'nasyamnasal'])->name('ayu.nasyam');
+Route::get('/services/shirodhara', [MainController::class, 'shirodhara'])->name('ayu.shirodhara');
+Route::get('/services/head-back-and-shoulder-massage', [MainController::class, 'hbsMassage'])->name('ayu.hbs');
 //Body
 Route::get('/services/body-fit-practices', [MainController::class, 'bodyFit'])->name('body.fit');
+Route::get('/services/outdoor-yoga-condition-training', [MainController::class, 'outdoorYoga'])->name('outdoor.yoga');
+Route::get('/services/yoga-stretching-massage', [MainController::class, 'yogaMassage'])->name('body.yoga');
 //Blog
 Route::get('/blog/{slug}', [MainController::class, 'viewBlog'])->name('view.blog');
 //Events

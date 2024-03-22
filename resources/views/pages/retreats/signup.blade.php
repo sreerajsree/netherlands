@@ -1,5 +1,8 @@
 @extends('layouts.app')
-
+@section('seo')
+<title>RESERVE A SPOT RETREAT - House for Positive Change</title>
+<meta name="description" content="House for Positive Change - Live life. Time flies.">
+@endsection
 @section('content')
     <!-- Breadcrumb Begin -->
     <section class="breadcrumb-option set-bg" data-setbg="{{ asset('assets/img/services/banner.png') }}">
@@ -9,7 +12,6 @@
                     <div class="breadcrumb__text">
                         <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
                         <h2>RESERVE A SPOT RETREAT FORM</h2>
-
                     </div>
                 </div>
             </div>
