@@ -137,11 +137,21 @@ ol {
   }
 }
 
+.form-check {
+  a {
+    color: #af7152;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .main-date {
   font-family: "Merriweather", serif;
   font-weight: bold;
   font-size: 16px;
   color: #fff;
+  padding-bottom: 5px;
   border-bottom: 1px solid #fff;
 }
 

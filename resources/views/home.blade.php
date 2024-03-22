@@ -149,7 +149,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">#</th>
-                                                        <th scope="col">Trainer Name</th>
+                                                        <th scope="col">Trainer Name / Service</th>
                                                         <th scope="col">Name</th>
                                                         <th scope="col">What are you interested in?</th>
                                                         <th scope="col">Preferred days of the week for your appointment?

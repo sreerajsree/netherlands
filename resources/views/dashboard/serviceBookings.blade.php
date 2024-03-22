@@ -11,7 +11,7 @@
         <!-- Content Row -->
         <div class="row justify-content-center">
             <div class="col-xl-10 col-md-10 mb-4">
-                <div class="card border-left-primary shadow h-100">
+                <div class="card border-left-dark shadow h-100">
                     <div class="card-header">
                         <h3>Service Bookings</h3>
                     </div>

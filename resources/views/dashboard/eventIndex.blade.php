@@ -6,14 +6,14 @@
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="{{ route('add.event') }}" class="d-none d-sm-inline-block btn btn-primary shadow-sm"><i
+            <a href="{{ route('add.event') }}" class="d-none d-sm-inline-block btn btn-dark shadow-sm"><i
                 class="fas fa-plus fa-sm text-white-50"></i> Add Event</a>
         </div>
 
         <!-- Content Row -->
         <div class="row justify-content-center">
             <div class="col-xl-10 col-md-10 mb-4">
-                <div class="card border-left-primary shadow h-100">
+                <div class="card border-left-dark shadow h-100">
                     <div class="card-header">
                         <h3>Blogs</h3>
                     </div>
@@ -47,7 +47,7 @@
                                                 width="50" alt="{{ $item->title }}">
                                         </td>
                                         <td class="d-flex">
-                                            <a target="_blank" href="{{ route('view.blog',$item->slug) }}" class="btn btn-primary mr-2"><i
+                                            <a target="_blank" href="{{ route('view.blog',$item->slug) }}" class="btn btn-dark mr-2"><i
                                                 class="fas fa-fw fa-eye"></i></a>
                                             <a href="{{ route('edit.event',$item->id) }}" class="btn btn-warning mr-2"><i
                                                     class="fas fa-fw fa-pen"></i></a>

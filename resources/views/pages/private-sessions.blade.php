@@ -48,17 +48,22 @@
                         </div>
                         <ul>
                             <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">Ayurvedic Healthcare</a></li>
+                                    alt="Logo"><a href="{{ route('ayu.healthcare') }}">Ayurvedic Healthcare</a></li>
                             <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">Yoga Therapy</a></li>
+                                    alt="Logo"><a href="{{ route('yoga.therapy') }}">Yoga Therapy</a></li>
                             <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">Children’s & Teen Yoga</a></li>
+                                    alt="Logo"><a href="{{ route('dc.yoga') }}">DeepRest (Chair) Yoga</a></li>
                             <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">DeepRest (Chair) Yoga</a></li>
-                            <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">Trauma Sensitive Yoga</a></li>
+                                    alt="Logo"><a href="{{ route('trauma.yoga') }}">Trauma Sensitive Yoga</a></li>
                         </ul>
-                        <a href="#" class="primary-btn mt-5">Let's Connect - Elianne</a>
+                        @auth
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#elianneModal"
+                                class="primary-btn mt-4 mx-2">Let's Connect - Elianne</a>
+                            @include('includes.elianne-form')
+                        @endauth
+                        @guest
+                            <a href="{{ route('login') }}" class="primary-btn mt-4 mx-2 text-uppercase">LOGIN TO Connect - Elianne</a>
+                        @endguest
                     </div>
                 </div>
             </div>
@@ -72,15 +77,22 @@
                         </div>
                         <ul>
                             <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">YoPi Training</a></li>
+                                    alt="Logo"><a href="{{ route('yopi.yoga') }}">YoPi Training</a></li>
                             <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">Train your Breath</a></li>
+                                    alt="Logo"><a href="{{ route('tyb.yoga') }}">Train your Breath</a></li>
                             <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">Foundational Yoga</a></li>
+                                    alt="Logo"><a href="{{ route('foundational.yoga') }}">Foundational Yoga</a></li>
                             <li><img width="20" height="20" src="{{ asset('assets/img/logo.png') }}"
-                                    alt="Logo"><a href="">Yoga Stretching Massage</a></li>
+                                    alt="Logo"><a href="{{ route('body.yoga') }}">Yoga Stretching Massage</a></li>
                         </ul>
-                        <a href="#" class="primary-btn mt-5">Let's Connect - Mukesh</a>
+                        @auth
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#elianneModal"
+                                class="primary-btn mt-4 mx-2">Let's Connect - Mukesh</a>
+                            @include('includes.elianne-form')
+                        @endauth
+                        @guest
+                            <a href="{{ route('login') }}" class="primary-btn mt-4 mx-2 text-uppercase">LOGIN TO Connect - Mukesh</a>
+                        @endguest
                     </div>
                 </div>
                 <div class="col-md-4">

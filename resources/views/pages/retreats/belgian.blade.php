@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('seo')
-<title>Know Yourself Retreat - House for Positive Change</title>
-<meta name="description" content="House for Positive Change - Live life. Time flies.">
+    <title>Know Yourself Retreat - House for Positive Change</title>
+    <meta name="description" content="House for Positive Change - Live life. Time flies.">
 @endsection
 @section('content')
     <!-- Breadcrumb Begin -->
@@ -13,17 +13,6 @@
                         <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
                         <h2>Know Yourself Retreat</h2>
                         <p class="main-date">17/05/2024 - 20/05/2024</p>
-                        <div class="breadcrumb__widget">
-                            <span>The "Know Yourself Retreat" is rejuvenating 4-day escape nestled in the High Ardennes of
-                                Belgium. The retreat will take place from the 17th until the 20th of May, and will aid you
-                                to the path of self growth. The retreat unfolds in a picturesque base near St. Hubert,
-                                surrounded by lush forests, rivers, and serene hills. Activities span yoga, meditation,
-                                mindful walks, forest bathing, and communal cooking. The retreat's essence lies in
-                                self-discovery and reflection, empowering each other, and embracing a conscious life. With
-                                accommodations by a tranquil water stream, the retreat includes twin-share lodging,
-                                vegetarian/vegan meals, yoga, guided hikes, campfire gatherings, and more. Embrace
-                                self-awareness in the serene embrace of nature.</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -32,9 +21,27 @@
     <!-- Breadcrumb End -->
     <section class="classes spad retreats">
         <div class="container">
+            <div class="p-3 text-center">
+                <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
+                <p class="mt-3">The "Know Yourself Retreat" is rejuvenating 4-day escape nestled in the High Ardennes of
+                    Belgium. The retreat will take place from the 17th until the 20th of May, and will aid you
+                    to the path of self growth. The retreat unfolds in a picturesque base near St. Hubert,
+                    surrounded by lush forests, rivers, and serene hills. Activities span yoga, meditation,
+                    mindful walks, forest bathing, and communal cooking. The retreat's essence lies in
+                    self-discovery and reflection, empowering each other, and embracing a conscious life. With
+                    accommodations by a tranquil water stream, the retreat includes twin-share lodging,
+                    vegetarian/vegan meals, yoga, guided hikes, campfire gatherings, and more. Embrace
+                    self-awareness in the serene embrace of nature.
+                </p>
+            </div>
             <div class="faq">
                 <div class="d-flex justify-content-center my-4">
-                    <a href="{{ route('retreat.signup') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
+                    @auth
+                        <a href="{{ route('retreat.signup') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
+                    @endauth
+                    @guest
+                        <a href="{{ route('login') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
+                    @endguest
                 </div>
                 <div class="section-title">
                     <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
@@ -146,10 +153,12 @@
                                     be sent.</p>
                                 <p>Further payments:</p>
                                 <div class="ms-3">
-                                    <p>- 50% of the trip cost will need to be sent by bank transfer 90 days before trip departure</p>
+                                    <p>- 50% of the trip cost will need to be sent by bank transfer 90 days before trip
+                                        departure</p>
                                     <p>- Final payment will need to be sent 60 days before trip departure</p>
                                 </div>
-                                <p>Please note that on all payments made by bank transfer, bank charges will have to be borne by the clients.</p>
+                                <p>Please note that on all payments made by bank transfer, bank charges will have to be
+                                    borne by the clients.</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -157,15 +166,20 @@
                                 <h2>Cancellation</h2>
                                 <hr>
                                 <p>
-                                    If it becomes necessary to cancel your trip, you must notify House For Positive Change, immediately in writing to the email provided by House For Positive Change. Once we receive your notice, cancellation will take effect.
+                                    If it becomes necessary to cancel your trip, you must notify House For Positive Change,
+                                    immediately in writing to the email provided by House For Positive Change. Once we
+                                    receive your notice, cancellation will take effect.
                                 </p>
                                 <p>
                                     Please note that the following charges will apply on cancellation:
                                 </p>
                                 <div class="ms-3">
-                                    <p>- If cancellation takes place between 90 and 60 days prior to departure, 50% of the first down payment will be forfeited</p>
-                                    <p>- If cancellation takes place less than 60-30 days prior to departure, 75% of the tour price will be forfeited</p>
-                                    <p>- If cancellation takes place less than 30 days prior to departure, 100% of the tour price will be forfeited</p>
+                                    <p>- If cancellation takes place between 90 and 60 days prior to departure, 50% of the
+                                        first down payment will be forfeited</p>
+                                    <p>- If cancellation takes place less than 60-30 days prior to departure, 75% of the
+                                        tour price will be forfeited</p>
+                                    <p>- If cancellation takes place less than 30 days prior to departure, 100% of the tour
+                                        price will be forfeited</p>
                                 </div>
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('seo')
-<title>Himalayan Bliss Odyssey Retreat - House for Positive Change</title>
-<meta name="description" content="House for Positive Change - Live life. Time flies.">
+    <title>Himalayan Bliss Odyssey Retreat - House for Positive Change</title>
+    <meta name="description" content="House for Positive Change - Live life. Time flies.">
 @endsection
 @section('content')
     <!-- Breadcrumb Begin -->
@@ -13,17 +13,6 @@
                         <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
                         <h2>Himalayan Bliss Odyssey Retreat</h2>
                         <p class="main-date">14/03/2024 - 27/03/2024</p>
-                        <div class="breadcrumb__widget">
-                            <span>Experience tranquillity in the serene Himalayas on a transformative 14-day retreat.
-                                Beginning and ending in Rishikesh, the yoga capital, this journey balances self-discovery
-                                and exploration. Hike through scenic valleys, encountering magical peaks like Nanda Devi,
-                                and practice yoga and meditation in the pure Himalayan environment. The retreat also
-                                embraces the untouched beauty of the Ganges, offering white-water rafting with camping on
-                                silver sandy beaches. Culminating with the vibrant Holi festival, participants challenge
-                                themselves amidst mountains, rivers, culture, and traditions. Highlights include Rishikesh
-                                sightseeing, yoga, meditation, Ayurvedic massage, and traditional Indian cooking lessons. An
-                                open heart and mind are key to embracing this immersive retreat.</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -32,13 +21,26 @@
     <!-- Breadcrumb End -->
     <section class="classes spad retreats">
         <div class="container">
+            <div class="p-3 text-center">
+                <img width="50" height="50" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
+                <p class="mt-3">Experience tranquillity in the serene Himalayas on a transformative 14-day retreat.
+                    Beginning and ending in Rishikesh, the yoga capital, this journey balances self-discovery
+                    and exploration. Hike through scenic valleys, encountering magical peaks like Nanda Devi,
+                    and practice yoga and meditation in the pure Himalayan environment. The retreat also
+                    embraces the untouched beauty of the Ganges, offering white-water rafting with camping on
+                    silver sandy beaches. Culminating with the vibrant Holi festival, participants challenge
+                    themselves amidst mountains, rivers, culture, and traditions. Highlights include Rishikesh
+                    sightseeing, yoga, meditation, Ayurvedic massage, and traditional Indian cooking lessons. An
+                    open heart and mind are key to embracing this immersive retreat.
+                </p>
+            </div>
             <div class="faq">
                 <div class="d-flex justify-content-center my-4">
                     @auth
-                    <a href="{{ route('retreat.signup') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
+                        <a href="{{ route('retreat.signup') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
                     @endauth
                     @guest
-                    <a href="{{ route('login') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
+                        <a href="{{ route('login') }}" class="primary-btn">SIGN UP FOR THE RETREAT</a>
                     @endguest
                 </div>
                 <div class="section-title">
@@ -326,9 +328,12 @@
                                     Please note that the following charges will apply on cancellation:
                                 </p>
                                 <div class="ms-3">
-                                    <p>- If cancellation takes place between 90 and 60 days prior to departure, 50% of the first down payment will be forfeited</p>
-                                    <p>- If cancellation takes place less than 60-30 days prior to departure, 75% of the tour price will be forfeited</p>
-                                    <p>- If cancellation takes place less than 30 days prior to departure, 100% of the tour price will be forfeited</p>
+                                    <p>- If cancellation takes place between 90 and 60 days prior to departure, 50% of the
+                                        first down payment will be forfeited</p>
+                                    <p>- If cancellation takes place less than 60-30 days prior to departure, 75% of the
+                                        tour price will be forfeited</p>
+                                    <p>- If cancellation takes place less than 30 days prior to departure, 100% of the tour
+                                        price will be forfeited</p>
                                 </div>
                             </div>
                         </div>
@@ -346,13 +351,15 @@
                                 <h2>Costs</h2>
                                 <hr>
                                 <p>Cost: € 2100 per person</p>
-                                <p>Private accommodation at hotel in Rishikesh and Joshimath: additional € 350 per person</p>
+                                <p>Private accommodation at hotel in Rishikesh and Joshimath: additional € 350 per person
+                                </p>
                                 <p>Single tent for river and trek trip: additional € 180 per person</p>
                                 <p>This price includes:</p>
                                 <div class="ms-3">
                                     <p>- 13 nights / 14 days retreat</p>
                                     <p>- Everyday yoga and meditation</p>
-                                    <p>- All accommodation on twin share basis (hotel, lodge, guest house, homestay, and glamping camping)</p>
+                                    <p>- All accommodation on twin share basis (hotel, lodge, guest house, homestay, and
+                                        glamping camping)</p>
                                     <p>- All transportation as per retreat itinerary</p>
                                     <p>- Dehradun Airport & Haridwar Railway Station transfers</p>
                                     <p>- Hiking in Chopta Valley, Garhwal Himalayas and North India</p>
@@ -367,10 +374,13 @@
                                 <p>This price excludes:</p>
                                 <div class="ms-3">
                                     <p>- Sleeping bag & items of personal clothing</p>
-                                    <p>- Air fares, visas, insurance, laundry, phone calls, beverages and bottled water, souvenirs, and other expenses of a personal nature</p>
+                                    <p>- Air fares, visas, insurance, laundry, phone calls, beverages and bottled water,
+                                        souvenirs, and other expenses of a personal nature</p>
                                     <p>- Tips for guides, cooks & porters</p>
-                                    <p>- Any costs arising out of unforeseen circumstances such as bad weather, landslides, road conditions and any other circumstances beyond our control</p>
-                                    <p>- Any costs arising out of emergency evacuations, search & rescue, medical/hospitalization expenses</p>
+                                    <p>- Any costs arising out of unforeseen circumstances such as bad weather, landslides,
+                                        road conditions and any other circumstances beyond our control</p>
+                                    <p>- Any costs arising out of emergency evacuations, search & rescue,
+                                        medical/hospitalization expenses</p>
                                     <p>- Any kind of insurances</p>
                                 </div>
                             </div>

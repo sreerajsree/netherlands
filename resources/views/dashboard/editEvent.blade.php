@@ -11,7 +11,7 @@
         <!-- Content Row -->
         <div class="row justify-content-center">
             <div class="col-xl-8 col-md-8 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card border-left-dark shadow h-100 py-2">
                     <div class="card-body">
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success alert-block">
@@ -94,7 +94,7 @@
                             <div class="form-group row mt-5">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <button type="submit" class="btn btn-dark">Save</button>
                                 </div>
                             </div>
                         </form>
